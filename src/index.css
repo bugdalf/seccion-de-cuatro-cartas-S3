@@ -17,12 +17,11 @@ body {
   --Blue: hsl(212, 86%, 64%);
     /* Neutral */
   --very-dark-blue: hsl(234, 12%, 34%);
-  --grayish-blue: hsl(229, 6%, 66%);
-  --very-light-gray: hsl(0, 0%, 98%);
+  --grayish-blue: hsl(229, 6%, 80%);
+  --very-light-gray: hsl(0, 0%, 97%);
 }
 
 .Main {
-  /* border: dashed 3px black; */
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -33,7 +32,8 @@ body {
   margin-top: 40px ;
   max-width: 320px;
   height: 200px;
-  color: var(--very-dark-blue)
+  color: var(--very-dark-blue);
+  /* border: solid 1px red; */
 }
 
 .Header__title {
@@ -61,23 +61,57 @@ body {
 .Card {
   max-width: 320px;
   min-height: 250px;
-  border: solid 1px red;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: white;
+  color: var(--very-dark-blue);
+  box-shadow: 1px 5px 20px 1px var(--grayish-blue);
+  /* border: solid 1px red; */
 }
 
-.Supervisor {
-  background-color: blueviolet;
+.Card__title {
+  font-size: 20px;
+  margin: 20px 25px 0px 25px;
 }
 
-.Builder {
-  background-color: palevioletred;
+.Card__paragraph {
+  font-size: 14px;
+  margin: 10px 25px 25px 25px;
 }
 
-.Karma {
-  background-color: yellowgreen;
+.Image__container {
+  margin-top: 40px;
+  padding-right: 25px ;
+  display: flex;
+  justify-content: flex-end;
 }
 
-.Calculator {
-  background-color: yellow;
+.Supervisor::before {
+  content: "";
+  height: 5px;
+  display: block;
+  background: var(--Cyan);
+}
+
+.Builder::before {
+  content: "";
+  height: 5px;
+  display: block;
+  background: var(--Red);
+}
+
+.Karma::before {
+  content: "";
+  height: 5px;
+  display: block;
+  background: var(--Orange);
+}
+
+.Calculator::before {
+  content: "";
+  height: 5px;
+  display: block;
+  background: var(--Blue);
 }
 
 @media screen and (min-width: 768px){
@@ -87,7 +121,7 @@ body {
       grid-template-rows: 1fr 1fr;
       grid-template-areas: 
           "Supervisor Builder"
-          "Karma Calculator"
+          "Karma Calculator";
       grid-gap: 1rem;
   }
 }
@@ -106,6 +140,8 @@ body {
   }
 
   .Header {
+    text-align: center;
+      max-width: none;
       width: 30%;
       grid-area: Header;
   }
