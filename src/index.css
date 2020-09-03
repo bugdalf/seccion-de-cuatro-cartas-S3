@@ -1,100 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
 body {
-    margin: 0px;
-    padding: 0px;
-    display: flex;
-    justify-content: center;
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+  background-color: var(--very-light-gray);
+  font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    /* Primary   */
+  --Red: hsl(0, 78%, 62%);
+  --Cyan: hsl(180, 62%, 55%);
+  --Orange: hsl(34, 97%, 64%);
+  --Blue: hsl(212, 86%, 64%);
+    /* Neutral */
+  --very-dark-blue: hsl(234, 12%, 34%);
+  --grayish-blue: hsl(229, 6%, 66%);
+  --very-light-gray: hsl(0, 0%, 98%);
 }
 
 .Main {
-    border: dashed 3px black;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.Container__cards {
-    max-width: 1025px;
-    border: solid 2px blue;
-    padding: 2rem 0;
-    display: grid;
-    justify-items: center;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-gap: 2rem;
+  /* border: dashed 3px black; */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .Header {
-    width: 300px;
-    height: 200px;
-    border: solid 3px green;
+  margin-top: 40px ;
+  max-width: 320px;
+  height: 200px;
+  color: var(--very-dark-blue)
+}
+
+.Header__title {
+  padding: 0;
+  font-weight: 200;
+  font-size: 26px;
+}
+
+.Header__paragraph {
+  text-align: center;
+  font-size: 16px;
+}
+
+.Container__cards {
+  max-width: 1025px;
+  /* border: solid 2px blue; */
+  padding: 2rem 0;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-gap: 2rem;
 }
 
 .Card {
-    min-width: 300px;
-    min-height: 250px;
-    border: solid 1px red;
+  max-width: 320px;
+  min-height: 250px;
+  border: solid 1px red;
 }
 
 .Supervisor {
-    background-color: blueviolet;
+  background-color: blueviolet;
 }
 
 .Builder {
-    background-color: palevioletred;
+  background-color: palevioletred;
 }
 
 .Karma {
-    background-color: yellowgreen;
+  background-color: yellowgreen;
 }
 
 .Calculator {
-    background-color: yellow;
+  background-color: yellow;
 }
 
 @media screen and (min-width: 768px){
-    .Container__cards {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        grid-template-areas: 
-            "Supervisor Builder"
-            "Karma Calculator"
-        grid-gap: 1rem;
-    }
+  .Container__cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-template-areas: 
+          "Supervisor Builder"
+          "Karma Calculator"
+      grid-gap: 1rem;
+  }
 }
 
 @media screen and (min-width: 1025px){
-    .Container__cards {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
-        grid-template-areas: 
-            ". Builder ."
-            "Supervisor Builder Calculator"
-            "Supervisor Karma Calculator"
-            ". Karma .";
-        grid-gap: 1rem;
-    }
+  .Container__cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+      grid-template-areas: 
+          ". Builder ."
+          "Supervisor Builder Calculator"
+          "Supervisor Karma Calculator"
+          ". Karma .";
+      grid-gap: 1rem;
+  }
 
-    .Header {
-        width: 30%;
-        grid-area: Header;
-    }
+  .Header {
+      width: 30%;
+      grid-area: Header;
+  }
 
-    .Supervisor {
-        grid-area: Supervisor;
-    }
-    
-    .Builder {
-        grid-area: Builder;
-    }
-    
-    .Karma {
-        grid-area: Karma;
-    }
-    
-    .Calculator {
-        grid-area: Calculator;
-    }
+  .Supervisor {
+      grid-area: Supervisor;
+  }
+  
+  .Builder {
+      grid-area: Builder;
+  }
+  
+  .Karma {
+      grid-area: Karma;
+  }
+  
+  .Calculator {
+      grid-area: Calculator;
+  }
 }
