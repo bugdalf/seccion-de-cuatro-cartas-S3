@@ -19,6 +19,6 @@ Mira el resultado [Demo](https://ankynator.github.io/seccion-de-cuatro-cartas-S3
 
 - Este reto pertenece a la lista de retos de [Frontend Mentor](https://www.frontendmentor.io)
 
-- Fomentado/impulsado/obligado por [#PlatziWebChallange - Semana #2](https://platzi.com/comunidad/platziwebchallange-semana-3/)
+- Fomentado/impulsado/obligado por [#PlatziWebChallange - Semana #3](https://platzi.com/comunidad/platziwebchallange-semana-3/)
 
 - [#PlatziWebChallange](https://platzi.com/blog/platzi_web_challenge/)
