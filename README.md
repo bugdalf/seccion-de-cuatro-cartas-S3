@@ -2,7 +2,7 @@
 
 ![Vista previa del diseño para el desafío de la sección de cuatro cartas](./design/desktop-preview.jpg)
 
-Mira el resultado [Demo](https://ankynator.github.io/seccion-de-cuatro-cartas-S3/)
+Mira el resultado [Demo](https://bugdalf.github.io/seccion-de-cuatro-cartas-S3/)
 
 **Para realizar este reto, se utilizo HTML CSS**
 
